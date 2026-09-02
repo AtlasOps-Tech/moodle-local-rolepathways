@@ -1,0 +1,102 @@
+:root {
+    --rp-navy: #102a43;
+    --rp-blue: #1666c5;
+    --rp-cyan: #2cbad3;
+    --rp-surface: #ffffff;
+    --rp-muted: #536779;
+}
+
+.rp-hero {
+    margin-bottom: 1.5rem;
+    padding: clamp(1.5rem, 4vw, 2.75rem);
+    border-radius: 1.25rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--rp-navy), #174f79);
+}
+
+.rp-hero h2 {
+    max-width: 48rem;
+    margin: .35rem 0 .65rem;
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.05;
+}
+
+.rp-eyebrow {
+    color: #9eeeff;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.rp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.rp-card {
+    padding: 1.15rem;
+    border: 1px solid #dce6ee;
+    border-radius: 1rem;
+    background: var(--rp-surface);
+    box-shadow: 0 .6rem 1.7rem rgba(16, 42, 67, .07);
+}
+
+.rp-card h3 {
+    color: var(--rp-navy);
+    font-size: 1.05rem;
+}
+
+.rp-metric {
+    display: block;
+    color: var(--rp-navy);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.rp-muted {
+    color: var(--rp-muted);
+}
+
+.rp-course {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e3ebf1;
+}
+
+.rp-course:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.rp-progress {
+    height: .6rem;
+    overflow: hidden;
+    margin-top: .5rem;
+    border-radius: 999px;
+    background: #e2eaf0;
+}
+
+.rp-progress > span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--rp-blue), var(--rp-cyan));
+}
+
+@media (max-width: 850px) {
+    .rp-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
